@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMBA Web App - Project Details</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for the slider -->
+    <script>
+        // jQuery for Image Slider
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const images = $(".slider-image");
+            const totalImages = images.length;
+            
+            function showImage(index) {
+                images.hide();
+                $(images[index]).show();
+            }
+            
+            $(".next").click(function() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                showImage(currentIndex);
+            });
+            
+            $(".prev").click(function() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                showImage(currentIndex);
+            });
+            
+            // Initial display
+            showImage(currentIndex);
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar (same as in the main projects page) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects/portfolio.html">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <main class="project-detail-page">
+        <section class="project-detail-container">
+            <div class="buttons-container">
+                <a href="https://github.com/jfjacobo/WMBA" target="_blank" class="btn">View Source Code</a>
+                <a href=""  target="_blank" class="btn">Visit Website</a>
+            </div>
+            
+            <h1 class="project-title">WMBA Web App</h1>
+            <div class="slider-container">
+                <button class="prev">Prev</button>
+                <div class="slider">
+                    <img src="project1-image1.jpg" alt="Project Image 1" class="slider-image">
+                    <img src="project1-image2.jpg" alt="Project Image 2" class="slider-image" style="display:none;">
+                    <img src="project1-image3.jpg" alt="Project Image 3" class="slider-image" style="display:none;">
+                </div>
+                <button class="next">Next</button>
+            </div>
+            
+            <p class="project-description">This application tracks baseball statistics, teams, players, and divisions. Built with C#, ASP.NET, MVC, Bootstrap, SQL, and JavaScript.</p>
+            
+            <p>In this group project, we worked with WMBA to develop a baseball stats tracking application, I worked in the back-end, focusing on the MVC design pattern, developing the models, controllers, and database context that will be fundamental in the app functionality.</p>
+            <p>I also worked as the paperwork manager, organizing and recording all the documents that are part of the project such as the work breakdown structure, AI usage, bug list, feedback implementation, and 2 files that include all the planning stage for the project development and every step we follow to achieve the prototype objectives. </p>
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>C#</li>
+                <li>ASP.NET</li>
+                <li>MVC</li>
+                <li>Bootstrap</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>Testing, and troubleshooting</li>
+                <li>Problem-solving</li>
+                <li>Organization</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

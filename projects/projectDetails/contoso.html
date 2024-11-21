@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoso Power BI - Project Details</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for the slider -->
+    <script>
+        // jQuery for Image Slider
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const images = $(".slider-image");
+            const totalImages = images.length;
+            
+            function showImage(index) {
+                images.hide();
+                $(images[index]).show();
+            }
+            
+            $(".next").click(function() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                showImage(currentIndex);
+            });
+            
+            $(".prev").click(function() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                showImage(currentIndex);
+            });
+            
+            // Initial display
+            showImage(currentIndex);
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar (same as in the main projects page) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects/portfolio.html">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <main class="project-detail-page">
+        <section class="project-detail-container">
+            <div class="buttons-container">
+                <a href="/download/JuanJacobo_IndependentProject.pbix" target="_blank" class="btn">View Source Code</a>
+                <a href=""  target="_blank" class="btn">Visit Website</a>
+            </div>
+            
+            <h1 class="project-title">Contoso Power BI Project</h1>
+            <div class="slider-container">
+                <button class="prev">Prev</button>
+                <div class="slider">
+                    <img src="/img/conteso/JuanJacobo_IndependentProject.png" alt="Project Image 1" class="slider-image">
+                    <img src="/img/conteso/contoso2.png" alt="Project Image 2" class="slider-image" style="display:none;">
+                    <img src="/img/conteso/contoso3.png" alt="Project Image 3" class="slider-image" style="display:none;">
+                </div>
+                <button class="next">Next</button>
+            </div>
+            
+            <p class="project-description">Dashboard report that analyse the sales from Contoso in the last years</p>
+            
+            
+            <p>
+                This dashboard was created using Power Bi, after downloading Contoso database that contains all the information from the company related to the years 2007,2008, and 2009.
+                I decided to focus on the sales from this company, and the profit that they gained in each of the operation years.
+            </p>
+            <p>
+                After setting up all the columns and tables I will need for this project, I started writing some key measures that will help me making calculations and get accurate results 
+                in each chart and table that is displayed in the dashboard.
+            </p>
+            <p>
+                In this dashboard you can find the total amount of sales, profit, average profit, a chart that displays the profit by year, bar chart that shows profit by quarter in each year, 
+                it is also displayed a descomposition tree with the profit and sales of each product from each channel that the store has, at the same time at the bottom there is 2 tables that show 
+                the top 10 and the worst 10 selling products from the store, there is also a pie chart that shows the profit from each channel of distribution.z
+            </p>
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>SQL</li>
+                <li>Power BI</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>&copy; 2024 Juan Jacobo. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

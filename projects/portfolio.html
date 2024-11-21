@@ -27,26 +27,52 @@
     <!-- Projects Section -->
     <main class="projects-page">
         <section class="projects-container">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project 1" class="project-image">
-                <h3 class="project-title">Project Title 1</h3>
-                <p class="project-languages">Languages: HTML, CSS, JavaScript</p>
-                <p class="project-description">A brief description of what this project is about and the technologies used.</p>
+            <div class="project-card" data-link="/projects/projectDetails/wmba.html">
+                <img src="project1.jpg" alt="WMBA App" class="project-image">
+                <h3 class="project-title">WMBA Web App</h3>
+                <p class="project-languages">C#, ASP.NET, MVC, Bootstrap, SQL, JavaScript</p>
+                <p class="project-description">Basebal stats, teams, players and division tracker</p>
             </div>
-            <div class="project-card">
-                <img src="project2.jpg" alt="Project 2" class="project-image">
-                <h3 class="project-title">Project Title 2</h3>
-                <p class="project-languages">Languages: Python, Django</p>
-                <p class="project-description">A brief description of what this project is about and the technologies used.</p>
+            <div class="project-card" data-link="/projects/projectDetails/contoso.html">
+                <img src="/img/conteso/JuanJacobo_IndependentProject.png" alt="Contoso App" class="project-image">
+                <h3 class="project-title">Contoso Power BI Project</h3>
+                <p class="project-languages">SQL, Power BI</p>
+                <p class="project-description">Dashboard report that analyse the sales from Contoso in the last years</p>
             </div>
-            <div class="project-card">
-                <img src="project3.jpg" alt="Project 3" class="project-image">
-                <h3 class="project-title">Project Title 3</h3>
-                <p class="project-languages">Languages: React, Node.js</p>
-                <p class="project-description">A brief description of what this project is about and the technologies used.</p>
+            <div class="project-card" data-link="/projects/projectDetails/cateringManagment.html">
+                <img src="project3.jpg" alt="Catering Managment" class="project-image">
+                <h3 class="project-title">Catering Managment App</h3>
+                <p class="project-languages">C#, ASP.NET, MVC, Bootstrap, SQL, JavaScript</p>
+                <p class="project-description">Application from an hotel that tracks all the events the hotel host</p>
             </div>
             <!-- Add more project cards as needed -->
+            <div class="project-card" data-link="/projects/project1-detail.html">
+                <img src="project1.jpg" alt="WMBA App" class="project-image">
+                <h3 class="project-title">WMBA Web App</h3>
+                <p class="project-languages">C#, ASP.NET, MVC, Bootstrap, SQL, JavaScript</p>
+                <p class="project-description">Basebal stats, teams, players and division tracker</p>
+            </div>
+            <div class="project-card" data-link="/projects/project2-detail.html">
+                <img src="project2.jpg" alt="Conteso App" class="project-image">
+                <h3 class="project-title">Conteso Power BI Project</h3>
+                <p class="project-languages">SQL, Power BI</p>
+                <p class="project-description">Dashboard report that analyse the sales from Conteso in the last years</p>
+            </div>
+            <div class="project-card" data-link="/projects/project3-detail.html">
+                <img src="project3.jpg" alt="Catering Managment" class="project-image">
+                <h3 class="project-title">Catering Managment App</h3>
+                <p class="project-languages">C#, ASP.NET, MVC, Bootstrap, SQL, JavaScript</p>
+                <p class="project-description">Application from an hotel that tracks all the events the hotel host</p>
+            </div>
         </section>
     </main>
+    <script>
+        // JavaScript to handle the redirection when the project card is clicked
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function() {
+                window.location.href = this.getAttribute('data-link');
+            });
+        });
+    </script>
 </body>
 </html>
