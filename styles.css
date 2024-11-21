@@ -155,7 +155,9 @@ h2 {
 .bio-section, .skills-section, .contact-section {
     margin-bottom: 30px;
 }
-
+.bio-section p{
+    padding-bottom: 20px;
+}
 h3 {
     font-size: 1.8rem;
     color: #333;
